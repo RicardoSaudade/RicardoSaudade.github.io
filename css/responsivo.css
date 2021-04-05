@@ -1,0 +1,55 @@
+@media screen and (max-width: 1170px) {
+    /* podemos ter outros breakpoints para outras resoluções coma  finalidade de evitar scrol*/
+}
+
+
+/* SEMPRE aplique as media queries da resolução MAIOR para a MENOR */
+@media screen and  (max-width: 900px) {
+/* tudo que vai aqui embaixo é seletor de css*/
+
+header div {
+    width: 100%;
+}
+
+#burger {
+    display: block;
+}
+
+#menu {
+    display: none;
+}
+/* conteúdo do site */
+.container {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 14px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 14px;
+}
+
+aside {
+    width: 100% !important;
+    text-align: center;
+}
+
+.polaroid {
+    width: 40%;
+    padding: 2px;
+    transform: none;
+    border-radius: 50%;
+}
+
+form {
+    width: 100%;
+}
+
+}

@@ -1,0 +1,33 @@
+input, 
+textarea, 
+button {
+    background: var(--fundo-medio);
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    width: 637px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: Arial;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    width: auto;
+    float: right;
+}
+
+#botao-enviar:hover {
+    background-color: var(--cor-menu-hover);
+    transition: background-color 0.5s;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+}

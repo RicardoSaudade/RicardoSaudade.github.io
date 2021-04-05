@@ -1,0 +1,117 @@
+/* definição de fonte customizada */
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype")
+}
+/* ============= ESTRUTURA DO HEADER =======*/
+/* é possível criar variáveis em CSS - isso ser feito */
+/* no nível hierárquico do documento */
+/* sempre começa com -- */
+:root {
+    --fundo-medio: #3B3D5D;
+    --fundo-escuro: #1F2235;
+    --cor-menu: #ffffff;
+    --cor-menu-hover: #ff4A57;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    background: var(--fundo-medio);
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--fundo-escuro);
+    padding: 30px 0;
+    /* workaround ("gambiarra") - vai corrigir o problema do scroll de nnão pintar o background do header*/
+    display: inline-table;
+    width: 100%;
+}
+
+header div {
+    /* valor ideal para resoluções de ~1200px */
+    width: 1170px;
+    /* 4 lados no sentido horario (top, right, bottom e left) */
+    margin: 0 auto; /*centraliza elemento*/
+}
+
+/* ============= ESTRUTURA DO MENU =======*/
+#burger {
+    border: 1px solid var(--cor-menu);
+    display: none;
+    width: 40px;
+    height: 32px;
+    padding: 8px 4px 0 4px;
+    float: right;
+}
+
+#burger div {
+    border-bottom: 1px solid var(--cor-menu);
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#burger:active div:nth-child(2) {
+     width: 60%;
+}
+
+#menu {
+/* faz com que o elemnto flutue sobre a area do elemento PAI */
+float: right;
+}
+
+#menu a {
+    color: var(--cor-menu);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 11px 20px;
+    /* propriedade que altera o comportamento de apresentação */
+    display: inline-block;
+}
+
+#menu a:hover {
+    color: var(--cor-menu-hover);
+}
+/* regras de prioridade podem ser BURLADAS COM O HACK DO !IMPORTANT (mas evite utilizar esse hack para não gerar conflitos) */
+#menu a.ativo {
+    background: var(--cor-menu-hover);
+    color: var(--cor-menu);
+}
+
+/* ============= ESTRUTURA DO CONTEÚDO =======*/
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    /* min-height e min-width: fazem o elem ter no minimo esta dimensao, porem se o conteudo dos filhos for maior ele crescerá automaticamente; */
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 115px);
+}
+
+section {
+    color: var(--cor-menu);
+}
+
+aside {
+    min-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* first-child & last-child valem para qualquer seletor */
+
+aside:first-child {
+    width: 660px;
+    margin-right: 100px;
+}
+
+aside:last-child {
+    width: 400px;
+}
