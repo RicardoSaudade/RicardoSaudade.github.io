@@ -1,55 +1,82 @@
-@media screen and (max-width: 1170px) {
-    /* podemos ter outros breakpoints para outras resoluções coma  finalidade de evitar scrol*/
-}
-
-
 /* SEMPRE aplique as media queries da resolução MAIOR para a MENOR */
 @media screen and  (max-width: 900px) {
-/* tudo que vai aqui embaixo é seletor de css*/
+    /* tudo que vai aqui embaixo é seletor de css*/
+    
+        header div {
+            width: 100%;
+        }
+    
+        #burger {
+            display: block;
+        }
+    
+        #menu {
+            display: none;
+        }
+        /* conteúdo do site */
+        .container {
+            width: 100%;
+        }
+    
+        section {
+            width: 100%;
+            padding: 14px;
+        }
+    
+        h1 {
+            font-size: 28px;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    
+        aside {
+            width: 100% !important;
+            text-align: center;
+        }
+    
+        .polaroid {
+            width: 40%;
+            padding: 2px;
+            transform: none;
+            border-radius: 50%;
+        }
+    
+        form {
+            width: 100%;
+        }
+    
+    }
 
-header div {
-    width: 100%;
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
 }
 
-#burger {
-    display: block;
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    #menu {
+        float: none;
+        border: solid 1px;
+        text-align: center;
+    }
 }
 
-#menu {
-    display: none;
-}
-/* conteúdo do site */
-.container {
-    width: 100%;
-}
-
-section {
-    width: 100%;
-    padding: 14px;
-}
-
-h1 {
-    font-size: 28px;
-}
-
-p {
-    font-size: 14px;
-}
-
-aside {
-    width: 100% !important;
-    text-align: center;
-}
-
-.polaroid {
-    width: 40%;
-    padding: 2px;
-    transform: none;
-    border-radius: 50%;
-}
-
-form {
-    width: 100%;
-}
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
 
 }

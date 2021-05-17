@@ -4,3 +4,14 @@ function enviaMensagem() {
 
     alert("Mensagem de " + valorInputUm + " enviada!")
 }
+
+function hide() {
+    //element = document.getElementById("menu");
+    const element = document.querySelector('#menu')
+    
+    if(getComputedStyle(element).display === "block") {
+        element.style.display = "none";
+    } else {
+        element.style.display = "block";
+    }
+}
